@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        /* Product Image Gallery */
+        .image-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .image-gallery img,
+        .image-gallery video {
+            width: 100px;
+            height: auto;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .image-gallery img.active,
+        .image-gallery video.active {
+            border: 2px solid #333;
+        }
+
+        .main-image img,
+        .main-image video {
+            width: 400px;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        /* Custom Sound Button */
+        .sound-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            display: none;
+        }
+
+        /* Product Details */
+        .product-details {
+            flex: 1;
+        }
+
+        .product-details h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .product-details .price {
+            font-size: 1.5rem;
+            color: #f36d19;
+            margin-bottom: 20px;
+        }
+
+        .product-details .size-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .size-options span {
+            padding: 10px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .size-options span.active {
+            border: 2px solid #333;
+        }
+
+        .product-details .stock-info {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .product-details .shipping-info {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .product-details .add-to-cart {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .shop-pay-button {
+            display: block;
+            background-color: #5A31F4;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .payment-options {
+            color: #5A31F4;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Description */
+        .product-description {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+            <img src="./qms21.webp" alt="Product Image 1" onclick="changeMainImage(this)">
+            <img src="./qms22.webp" alt="Product Image 2" onclick="changeMainImage(this)">
+            <img src="./qms23.webp" alt="Product Image 3" onclick="changeMainImage(this)">
+            <!-- Video Thumbnail -->
+            <video src="qmsv2.mp4" muted onclick="changeMainVideo(this)"></video>
+        </div>
+
+        <!-- Main Product Image and Video -->
+        <div class="main-image" style="position:relative;">
+            <img id="mainProductImage" src="https://via.placeholder.com/400" alt="Main Product Image">
+            <video id="mainProductVideo" style="display:none;" muted autoplay loop></video>
+            <!-- Sound Button -->
+            <button id="soundButton" class="sound-toggle">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <h1>ROWAN ABAYA</h1>
+            <p class="price">£66.99</p>
+
+            <!-- Size Options -->
+            <div class="size-options">
+                <span id="smallSize" class="active">S</span>
+                <span id="mediumSize">M</span>
+                <span id="largeSize">L</span>
+                <span>XL</span>
+                <span>XXL</span>
+                <span>XXXL</span>
+            </div>
+
+            <!-- Stock Info -->
+            <div class="stock-info">
+                <i class="fas fa-globe"></i>
+                <p>We ship worldwide</p>
+            </div>
+            <div class="stock-info">
+                <i class="fas fa-check-circle" style="color: green;"></i>
+                <p>In stock, ready to ship</p>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <button class="add-to-cart">Add to Cart</button>
+            <a href="#" class="shop-pay-button">Buy with Shop Pay</a>
+            <p class="payment-options">More payment options</p>
+
+            <!-- Product Description -->
+            <div class="product-description">
+                <p>A stunning shimmery mauve abaya with sequin embellished sleeves.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to change the main image when a thumbnail is clicked
+        function changeMainImage(thumbnail) {
+            const newSrc = thumbnail.src;
+            document.getElementById('mainProductImage').src = newSrc;
+            document.getElementById('mainProductVideo').style.display = 'none';
+            document.getElementById('mainProductImage').style.display = 'block';
+            document.getElementById('soundButton').style.display = 'none';
+
+            // Remove 'active' class from all thumbnails
+            const thumbnails = document.querySelectorAll('.image-gallery img, .image-gallery video');
+            thumbnails.forEach(img => img.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        // JavaScript function to display video in the main section when video is clicked
+        function changeMainVideo(video) {
+            const videoSrc = video.src;
+            const mainVideo = document.getElementById('mainProductVideo');
+            mainVideo.src = videoSrc;
+            mainVideo.style.display = 'block';
+            mainVideo.play(); // Enable autoplay
+
+            document.getElementById('mainProductImage').style.display = 'none';
+            document.getElementById('soundButton').style.display = 'block'; // Show sound button
+
+            // Remove 'active' class from all thumbnails
+            const thumbnails = document.querySelectorAll('.image-gallery img, .image-gallery video');
+            thumbnails.forEach(img => img.classList.remove('active'));
+            video.classList.add('active');
+        }
+
+        // Sound toggle functionality for the video
+        const soundButton = document.getElementById('soundButton');
+        const mainProductVideo = document.getElementById('mainProductVideo');
+
+        soundButton.addEventListener('click', function() {
+            if (mainProductVideo.muted) {
+                mainProductVideo.muted = false;
+                soundButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+            } else {
+                mainProductVideo.muted = true;
+                soundButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            }
+        });
+
+        // Size option toggle functionality with page redirection for small and large sizes
+        const sizeOptions = document.querySelectorAll('.size-options span');
+        sizeOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                sizeOptions.forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Redirect based on size selection
+                if (this.id === 'smallSize') {
+                    window.location.href = 'smallProduct.html'; // Redirect to small product page
+                } else if (this.id === 'largeSize') {
+                    window.location.href = 'largeProduct.html'; // Redirect to large product page
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
