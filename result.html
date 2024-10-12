@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Hidaya Arts Fest 2k24 - Result Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .result-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .highlight {
+            background-color: #f1f8ff;
+        }
+        .winner {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            animation: congrats-animation 1.5s infinite alternate; /* Adding animation */
+        }
+        .ranking {
+            margin-top: 30px;
+        }
+        .ranking h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .ranking ol {
+            list-style-type: decimal;
+            padding-left: 40px;
+        }
+        .ranking ol li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Congratulation animation styles */
+        @keyframes congrats-animation {
+            0% { transform: scale(1); background-color: #28a745; }
+            100% { transform: scale(1.1); background-color: #32c851; }
+        }
+
+        /* Styles for the popup animation */
+        #congratulation-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            text-align: center;
+            animation: popup-animation 0.8s ease-out;
+        }
+        #congratulation-popup h2 {
+            color: #007bff;
+        }
+        #congratulation-popup p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Popup animation */
+        @keyframes popup-animation {
+            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Al Hidaya Arts Fest 2k24 - Result</h1>
+
+    <div class="result-container">
+        <h2>Team Scores (with Percentages)</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Score</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="highlight">
+                    <td>Beith Hanoon</td>
+                    <td>159</td> <!-- Placeholder Score -->
+                    <td><span id="hanoon-percentage"></span>%</td>
+                </tr>
+                <tr>
+                    <td>Beith Jala</td>
+                    <td>157</td> <!-- Placeholder Score -->
+                    <td><span id="jala-percentage"></span>%</td>
+                </tr>
+                <tr class="highlight">
+                    <td>Beith Sahur</td>
+                    <td>145</td> <!-- Placeholder Score -->
+                    <td><span id="sahur-percentage"></span>%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="ranking">
+            <h2>Final Rankings</h2>
+            <ol>
+                <li>Beith Hanoon (159 Points)</li>
+                <li>Beith Jala (157 Points)</li>
+                <li>Beith Sahur (145 Points)</li>
+            </ol>
+        </div>
+
+        <h2 class="winner">🏆 Winner: Beith Hanoon 🏆</h2>
+    </div>
+
+    <!-- Congratulation Popup -->
+    <div id="congratulation-popup">
+        <h2>🎉 Congratulations Beith Hanoon! 🎉</h2>
+        <p>You are the champions of Al Hidaya Arts Fest 2k24!</p>
+    </div>
+
+    <script>
+        // Scores of each team
+        const scores = {
+            hanoon: 159,
+            jala: 157,
+            sahur: 145
+        };
+
+        const totalPossibleScore = 200; // Maximum score any team can achieve
+
+        // Function to calculate percentage
+        function calculatePercentage(score) {
+            return ((score / totalPossibleScore) * 100).toFixed(2);
+        }
+
+        // Set percentages for each team
+        document.getElementById('hanoon-percentage').innerText = calculatePercentage(scores.hanoon);
+        document.getElementById('jala-percentage').innerText = calculatePercentage(scores.jala);
+        document.getElementById('sahur-percentage').innerText = calculatePercentage(scores.sahur);
+
+        // Display congratulation popup for the winner
+        window.onload = function() {
+            const popup = document.getElementById('congratulation-popup');
+            popup.style.display = 'block';
+
+            // Automatically hide popup after 5 seconds
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 5000);
+        };
+    </script>
+
+</body>
+</html>
