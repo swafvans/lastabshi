@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasthabshi 2k'24</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #161515;
+            padding: 1rem 0;
+            color: #ddd;
+            border-bottom: 1px solid #252424;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 5%; /* Added padding for better spacing */
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 50px; /* Adjust logo size */
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 2em;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Section with Background Image */
+        .main-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5% 10%;
+            background-image: url('./'); /* Background image */
+            background-size: cover; /* Ensure the image covers the entire section */
+            background-position: center; /* Center the background image */
+            height: 100vh;
+            color: rgb(0, 0, 0); /* Text color on the background */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+        }
+
+        /* Left Section for the image */
+        .left-section {
+            position: relative;
+        }
+
+        /* Adjust the image size here */
+        .left-section img {
+            width: 500px;  /* Change this value to resize */
+            height: auto;  /* Keeps the aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Right Section for the content */
+        .right-section {
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .right-section h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        .right-section p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+
+        .right-section .btn {
+            padding: 1em 2em;
+            background-color: #000;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 2em 0;
+            background-color: #000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo on the left side -->
+        <div>
+            <a href="./index.html">
+                <img src="./logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Menu Items -->
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="short.html">Shorts</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section with Background Image -->
+    <section class="main-section">
+        <!-- Left Section (Image) -->
+        <div class="left-section">
+            <img src="./las.jpg" alt="Product Image">
+        </div>
+
+        <!-- Right Section (Content) -->
+        <div class="right-section">
+            <h1>LASTHABSHI</h1>
+            <p>Arts Fest 2k24</p>
+            <p>Al-Hidaya Islamic Academy Presents</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2k24 Al-Hidaya Arts Fest
+    </footer>
+</body>
+</html>
