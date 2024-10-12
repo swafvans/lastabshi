@@ -19,9 +19,20 @@
             padding: 20px;
         }
         nav {
-            background-color: #fff;
-            padding: 1em 0;
-            border-bottom: 1px solid #ddd;
+            background-color: #161515;
+            padding: 1rem 0;
+            color: #ddd;
+            border-bottom: 1px solid #252424;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 5%; /* Added padding for better spacing */
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 50px; /* Adjust logo size */
+            height: auto;
         }
 
         nav ul {
@@ -35,10 +46,11 @@
         }
 
         nav ul li a {
-            color: #000;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
         }
+
 
         .contact-container {
             max-width: 900px;
@@ -142,6 +154,14 @@
 </head>
 <body>
     <nav>
+        <!-- Logo on the left side -->
+        <div>
+            <a href="./index.html">
+                <img src="./logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Menu Items -->
         <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="Image.html">Image</a></li>
