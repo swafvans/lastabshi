@@ -12,6 +12,39 @@
             padding: 20px;
             color: #333;
         }
+        nav {
+            background-color: #161515;
+            padding: 1rem 0;
+            color: #ddd;
+            border-bottom: 1px solid #252424;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 5%; /* Added padding for better spacing */
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 50px; /* Adjust logo size */
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 2em;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         h1 {
             text-align: center;
             color: #007bff;
@@ -103,6 +136,22 @@
 <body>
 
     <h1>Al Hidaya Arts Fest 2k24 - Result</h1>
+    <nav>
+        <!-- Logo on the left side -->
+        <div>
+            <a href="./index.html">
+                <img src="./logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Menu Items -->
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="short.html">Shorts</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <div class="result-container">
         <h2>Team Scores (with Percentages)</h2>
