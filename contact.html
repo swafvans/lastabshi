@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Al Hidaya Arts Fest 2k24</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fcb040;
+            color: #333;
+            padding: 20px;
+        }
+        nav {
+            background-color: #161515;
+            padding: 1rem 0;
+            color: #ddd;
+            border-bottom: 1px solid #252424;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 5%;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 2em;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.6s ease;
+        }
+        nav ul li a:hover {
+            color: #fcb040;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 2.5em;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .gform {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .gform label {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .gform input,
+        .gform textarea {
+            padding: 15px;
+            font-size: 1.1em;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .gform input:focus,
+        .gform textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+        }
+
+        .gform textarea:hover {
+            border-color: #00e7ff;
+            box-shadow: 0 0 20px #00e7ff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .gform button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .gform button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add some responsiveness */
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .ginput,
+            .gtextarea {
+                padding: 12px;
+                font-size: 1em;
+            }
+
+            .gform button {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- Logo on the left side -->
+        <div>
+            <a href="./index.html">
+                <img src="./logo.png" alt="Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Menu Items -->
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="Image.html">Image</a></li>
+            <li><a href="short.html">Shorts</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+
+        <div class="contact-info">
+            <p>If you have any questions about the Al Hidaya Arts Fest 2k24, feel free to reach out to us! Simply fill out the form below, and we'll get back to you as soon as possible.</p>
+        </div>
+
+        <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbxKG5evzPz-3xUk7EjJ15mjUja2xfghPKF-F9xR1sNy68C46ihJleq_6lE7AmylfoPM/exec" onsubmit="redirectToResults()">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to redirect to result page after form submission
+        function redirectToResults() {
+            setTimeout(() => {
+                window.location.href = 'contact.html'; // Redirect to result.html after submission
+            }, 1000); // Delay of 1 second
+        }
+    </script>
+</body>
+</html>
