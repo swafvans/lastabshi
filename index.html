@@ -62,83 +62,123 @@
         .main-section {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding: 5% 10%;
-            background-image: url('./'); /* Background image */
-            background-size: cover;
-            background-position: center;
+            background-color: #fcb040;
             height: 100vh;
             color: rgb(0, 0, 0);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            padding-right: 60%;
         }
 
-        /* Left Section for the image */
+        /* Left Section for the image and text */
         .left-section {
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 400px;
         }
 
         /* Adjust the image size */
         .left-section img {
-            width: 500px;
+            width: 300px; /* Resized image */
             height: auto;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* Right Section for the content */
-        .right-section {
-            max-width: 400px;
-            text-align: left;
-        }
-
-        .right-section h1 {
-            font-size: 3em;
+        /* Text under the image */
+        .left-section h1 {
+            font-size: 2.5em;
             font-weight: bold;
-            margin-bottom: 0.5em;
+            margin-top: 1em;
         }
 
-        .right-section p {
+        .left-section p {
             font-size: 1.2em;
-            margin-bottom: 1.5em;
+            margin-top: 0.5em;
         }
 
-        .right-section .btn {
-            padding: 1em 2em;
-            background-color: #000;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
+        /* Login Form */
+        .form {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            max-width: 350px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 4.5%;
+        }
+
+        .form h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .form input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1.2em;
+            border: 1px solid #ddd;
             border-radius: 5px;
-            font-weight: bold;
+        }
+
+        .form button {
             display: inline-block;
+            width: 100%;
+            padding: 1em;
+            background-color: #161515;
+            color: #fff;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        .form .link{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 17px;
-        padding-top: 20px;
-        text-align: center;
+
+        .form button:hover {
+            background-color: #fcb040;
         }
-        .form .link a{
-        text-decoration: none;
-        color: #ff7200;
+
+        .form .link {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            padding-top: 20px;
+            text-align: center;
         }
-        .liw{
-        padding-top: 15px;
-        padding-bottom: 10px;
-        text-align: center;
+
+        .form .link a {
+            text-decoration: none;
+            color: #ff7200;
         }
-        .icons a{
-        text-decoration: none;
-        color: #fff;
+
+        .liw {
+            padding-top: 15px;
+            padding-bottom: 10px;
+            text-align: center;
         }
-        .icons ion-icon{
-        color: #fff;
-        font-size: 30px;
-        padding-left: 14px;
-        padding-top: 5px;
-        transition: 0.3s ease;
+
+        .icons a {
+            text-decoration: none;
+            color: #fff;
         }
-        .icons ion-icon:hover{
-        color: #ff7200;
+
+        .icons ion-icon {
+            color: #fff;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            transition: 0.3s ease;
+        }
+
+        .icons ion-icon:hover {
+            color: #ff7200;
         }
 
         /* Footer Section */
@@ -149,108 +189,6 @@
             color: white;
         }
 
-        /* Media Queries for Responsiveness */
-
-        /* Tablet view (width between 768px and 1024px) */
-        @media (max-width: 1024px) and (min-width: 768px) {
-            
-
-            .main-section {
-                flex-direction: column; /* Stack content vertically */
-                padding: 5% 5% 5% 5%;
-            }
-
-            .left-section img {
-                width: 400px; /* Adjust image size for tablets */
-            }
-
-            .right-section {
-                max-width: 90%; /* Increase the content width */
-            }
-
-            .right-section h1 {
-                font-size: 2.5em; /* Adjust heading size */
-            }
-
-            .right-section p {
-                font-size: 1.1em; /* Adjust paragraph size */
-            }
-        }
-
-        /* Phone view (width less than 768px) */
-        @media (max-width: 768px) {
-            n
-
-            .main-section {
-                flex-direction: column;
-                padding: 5% 3%;
-                text-align: center;
-            }
-
-            .left-section img {
-                width: 250px; /* Smaller image for phones */
-                margin-bottom: 2em;
-                box-shadow: -5px 6px 5px 2px rgba(0, 0, 0, 0.3);
-            }
-
-            .right-section {
-                max-width: 100%;
-            }
-
-            .right-section h1 {
-                font-size: 1.8em; /* Smaller heading for phones */
-            }
-
-            .right-section p {
-                font-size: 1em; /* Adjust paragraph size */
-            }
-
-            .right-section .btn {
-                padding: 0.8em 1.5em; /* Smaller button for phones */
-            }
-
-            footer {
-                padding: 1em 0;
-            }
-        }
-
-        /* Large screen/TV view (width greater than 1920px) */
-        @media (min-width: 1920px) {
-            
-
-            .main-section {
-                padding: 5% 15%;
-                height: 80vh; /* Adjust height for larger screens */
-            }
-
-            .left-section img {
-                width: 700px; /* Increase image size for large screens */
-            }
-
-            .right-section {
-                max-width: 50%; /* Increase the width of the content */
-                margin-right: 20%;
-                align-items:normal;
-                text-shadow: 3px 0px 4px rgba(0, 0, 0, 0.7);
-            }
-
-            .right-section h1 {
-                font-size: 4.5em; /* Larger heading for TV */
-            }
-
-            .right-section p {
-                font-size: 2em; /* Larger text for readability */
-            }
-
-            .right-section .btn {
-                padding: 1.5em 3em; /* Increase button size for TV */
-                font-size: 1.5em; /* Larger button text */
-            }
-
-            footer {
-                font-size: 1.5em; /* Increase footer text size */
-            }
-        }
     </style>
 </head>
 <body>
@@ -273,29 +211,25 @@
         </ul>
     </nav>
 
-    <!-- Main Section with Background Image -->
+    <!-- Main Section with Image and Text -->
     <section class="main-section">
-        <!-- Left Section (Image) -->
+        <!-- Left Section (Image and Text) -->
         <div class="left-section">
-            <img src="./las.jpg" alt="Product Image">
-        </div>
-
-        <!-- Right Section (Content) -->
-        <div class="right-section">
+            <img src="./las.jpg" alt="Event Image">
             <h1>LASTHABSHI</h1>
             <p>Arts Fest 2k24</p>
             <p>Al-Hidaya Islamic Academy Presents</p>
         </div>
-
     </section>
+
+    <!-- Login Form -->
     <div class="form">
         <h2>Login Here</h2>
-        <input type="email" name="email" placeholder="Enter Email Here">
-        <input type="password" name="" placeholder="Enter Password Here">
-        <button class="btnn"><a href="#">Login</a></button>
+        <input type="email" id="email" placeholder=" Email ">
+        <input type="password" id="password" placeholder=" Password ">
+        <button class="btnn" onclick="login()">Login</button>
 
-        <p class="link">Don't have an account<br>
-        <a href="#">Sign up </a> here</a></p>
+        <p class="link">Don't have an account? <a href="#">Sign up here</a></p>
         <p class="liw">Log in with</p>
 
         <div class="icons">
@@ -305,13 +239,37 @@
             <a href="#"><ion-icon name="logo-google"></ion-icon></a>
             <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
         </div>
-
     </div>
 
     <!-- Footer -->
     <footer>
         &copy; 2k24 Al-Hidaya Arts Fest
     </footer>
+
+    <!-- Add Ionicons for Social Media Icons -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- JavaScript for form validation and login -->
+    <script>
+        function login() {
+            // Get the input values
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Basic validation
+            if (!email || !password) {
+                alert("Please enter both email and password.");
+                return;
+            }
+
+            // Sample authentication
+            if (email === "admin@example.com" && password === "password") {
+                window.location.href = "dashboard.html";
+            } else {
+                console.log("Invalid login attempt");
+            }
+        }
+    </script>
 </body>
 </html>
-
