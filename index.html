@@ -63,9 +63,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             padding: 5% 10%;
             background-image: url('./bg\ .jpg');
-            height: 100vh;
+            height: auto;
             color: rgb(0, 0, 0);
         }
 
@@ -76,37 +77,35 @@
             align-items: center;
             text-align: center;
             max-width: 400px;
-            margin-right: 50px; /* Add space between image and text */
+            margin-bottom: 20px; /* Added margin for spacing */
         }
 
         /* Adjust the image size */
         .left-section img {
-            width: 120%; /* Resized image */
+            width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 4px 4px 20px 0px;
-            margin-right: 60%;
         }
 
         /* Right Section with Variety Box Styling */
         .right-section {
             max-width: 600px;
-            text-align: left;
+            text-align: center;
             color: #ffffff;
             border-radius: 20px;
             padding: 2% 5%;
             background: linear-gradient(135deg, #3f3f41, #fcb040);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.23);
+            border: 2px solid #ffffff;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
-        /* Add hover effect to the right-section */
         .right-section:hover {
             transform: scale(1.05);
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4), 0 8px 10px rgba(0, 0, 0, 0.3);
         }
 
-        /* Text under the image */
         .right-section h1 {
             font-size: 2.5em;
             font-weight: bold;
@@ -124,10 +123,13 @@
             padding: 2em 0;
             background-color: #3f3f41;
             color: white;
+            margin-top: 20px;
         }
 
-         /* Phone screens (max-width: 600px) */
-         @media only screen and (max-width: 600px) {
+        /* Media Queries */
+
+        /* Phone screens (max-width: 600px) */
+        @media only screen and (max-width: 600px) {
             /* The layout on phones: img under nav, text under img, footer last */
             .main-section {
                 padding: 2%;
