@@ -28,12 +28,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1em 5%; /* Added padding for better spacing */
+            padding: 1em 5%;
         }
 
         /* Logo styling */
         .logo {
-            width: 50px; /* Adjust logo size */
+            width: 50px;
             height: auto;
         }
 
@@ -53,8 +53,9 @@
             font-weight: bold;
             transition: 0.6s ease;
         }
-        nav ul li a:hover{
-        color: #fcb040;
+
+        nav ul li a:hover {
+            color: #fcb040;
         }
 
         /* Main Section with Background Image */
@@ -64,11 +65,11 @@
             justify-content: space-between;
             padding: 5% 10%;
             background-image: url('./'); /* Background image */
-            background-size: cover; /* Ensure the image covers the entire section */
-            background-position: center; /* Center the background image */
+            background-size: cover;
+            background-position: center;
             height: 100vh;
-            color: rgb(0, 0, 0); /* Text color on the background */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         /* Left Section for the image */
@@ -76,10 +77,10 @@
             position: relative;
         }
 
-        /* Adjust the image size here */
+        /* Adjust the image size */
         .left-section img {
-            width: 500px;  /* Change this value to resize */
-            height: auto;  /* Keeps the aspect ratio */
+            width: 500px;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
@@ -117,6 +118,109 @@
             padding: 2em 0;
             background-color: #000;
             color: white;
+        }
+
+        /* Media Queries for Responsiveness */
+
+        /* Tablet view (width between 768px and 1024px) */
+        @media (max-width: 1024px) and (min-width: 768px) {
+            
+
+            .main-section {
+                flex-direction: column; /* Stack content vertically */
+                padding: 5% 5% 5% 5%;
+            }
+
+            .left-section img {
+                width: 400px; /* Adjust image size for tablets */
+            }
+
+            .right-section {
+                max-width: 90%; /* Increase the content width */
+            }
+
+            .right-section h1 {
+                font-size: 2.5em; /* Adjust heading size */
+            }
+
+            .right-section p {
+                font-size: 1.1em; /* Adjust paragraph size */
+            }
+        }
+
+        /* Phone view (width less than 768px) */
+        @media (max-width: 768px) {
+            n
+
+            .main-section {
+                flex-direction: column;
+                padding: 5% 3%;
+                text-align: center;
+            }
+
+            .left-section img {
+                width: 250px; /* Smaller image for phones */
+                margin-bottom: 2em;
+                box-shadow: -5px 6px 5px 2px rgba(0, 0, 0, 0.3);
+            }
+
+            .right-section {
+                max-width: 100%;
+            }
+
+            .right-section h1 {
+                font-size: 1.8em; /* Smaller heading for phones */
+            }
+
+            .right-section p {
+                font-size: 1em; /* Adjust paragraph size */
+            }
+
+            .right-section .btn {
+                padding: 0.8em 1.5em; /* Smaller button for phones */
+            }
+
+            footer {
+                padding: 1em 0;
+            }
+        }
+
+        /* Large screen/TV view (width greater than 1920px) */
+        @media (min-width: 1920px) {
+            
+
+            .main-section {
+                padding: 5% 15%;
+                height: 80vh; /* Adjust height for larger screens */
+            }
+
+            .left-section img {
+                width: 700px; /* Increase image size for large screens */
+            }
+
+            .right-section {
+                max-width: 50%; /* Increase the width of the content */
+                margin-right: 20%;
+                align-items:normal;
+                text-shadow: 3px 0px 4px rgba(0, 0, 0, 0.7);
+            }
+
+            .right-section h1 {
+                font-size: 4.5em; /* Larger heading for TV */
+            }
+
+            .right-section p {
+                font-size: 2em; /* Larger text for readability */
+            }
+
+            .right-section .btn {
+                padding: 1.5em 3em; /* Increase button size for TV */
+                font-size: 1.5em; /* Larger button text */
+            }
+
+            footer {
+                font-size: 1.5em; /* Increase footer text size */
+            }
         }
     </style>
 </head>
@@ -161,3 +265,4 @@
     </footer>
 </body>
 </html>
+
