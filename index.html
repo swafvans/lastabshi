@@ -127,31 +127,66 @@
 
         /* Media Queries */
 
-        /* Phone screens (max-width: 600px) */
-        @media only screen and (max-width: 600px) {
-            /* The layout on phones: img under nav, text under img, footer last */
-            .main-section {
-                padding: 2%;
-            }
+       /* Phone screens (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+    /* Reordering the nav items like on desktop */
+    nav ul {
+        flex-direction: row;
+        padding: 0;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
-            .left-section img {
-                width: 100%;
-            }
+    nav ul li {
+        margin-left: 1em; /* Keep enough spacing between items */
+        margin-bottom: 0;
+    }
 
-            .right-section {
-                padding: 10%;
-                max-width: 100%;
-                border-radius: 10px;
-            }
+    nav ul li a {
+        font-size: 0.9em; /* Adjust font size for mobile */
+    }
 
-            .right-section h1 {
-                font-size: 1.8em;
-            }
+    /* Adjust logo size for mobile */
+    .logo {
+        width: 40px;
+    }
 
-            .right-section p {
-                font-size: 1em;
-            }
-        }
+    /* Reordering elements: image first, then text, then footer */
+    .main-section {
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .left-section {
+        order: 1;
+    }
+
+    .right-section {
+        order: 2;
+        padding: 10%;
+        max-width: 100%;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .right-section h1 {
+        font-size: 1.8em;
+    }
+
+    .right-section p {
+        font-size: 1em;
+    }
+
+    footer {
+        order: 3;
+    }
+
+    /* Adjusting image size for phones */
+    .left-section img {
+        width: 100%;
+    }
+}
+upload
 
         /* Tablet screens (601px - 1024px) */
         @media only screen and (min-width: 601px) and (max-width: 1024px) {
