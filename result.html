@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Hidaya Arts Fest 2k24 - Result Page</title>
-    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <title>Contact Us - Al Hidaya Arts Fest 2k24</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fcb040;
+        * {
             margin: 0;
-            padding: 20px;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fcb040;
+            color: #333;
+            padding: 20px;
+        }
         nav {
             background-color: #161515;
             padding: 1rem 0;
@@ -23,8 +27,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 1em 5%;
+            padding-top: 0;
+            margin-top: 0;
         }
 
+        /* Logo styling */
         .logo {
             width: 50px;
             height: auto;
@@ -44,115 +51,112 @@
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.6s ease;
+        }
+        nav ul li a:hover {
+            color: #fcb040;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             text-align: center;
-            color: #041c35;
-        }
-
-        .result-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(128, 128, 128, 0.5);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
             margin-bottom: 30px;
+            color: #333;
+            font-size: 2.5em;
         }
 
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 15px;
+        .contact-info {
             text-align: center;
+            margin-bottom: 40px;
         }
 
-        th {
-            background-color: #3f3f41;
-            color: white;
+        .contact-info p {
+            font-size: 1.1em;
+            color: #555;
         }
 
-        .highlight {
-            background-color: #f1f8ff;
+        .gform {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .winner {
-            background-color: #fcb040;
-            color: #3f3f41;
-            font-weight: bold;
-            animation: congrats-animation 1.53s infinite alternate;
-            border-radius: 10px;
-        }
-
-        .ranking {
-            margin-top: 30px;
-        }
-
-        .ranking h2 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .ranking ol {
-            list-style-type: decimal;
-            padding-left: 40px;
-        }
-
-        .ranking ol li {
+        .gform label {
             font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        /* Congratulation animation styles */
-        @keyframes congrats-animation {
-            0% { transform: scale(1); background-color: #00ff22; }
-            100% { transform: scale(1.1); background-color: #00ff22; }
-        }
-
-        /* Popup animation */
-        #congratulation-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fcb040;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgb(73, 72, 72);
-            display: none;
-            text-align: center;
-            animation: popup-animation 0.5s ease-out;
-        }
-        #congratulation-popup p b{ 
-            color: #fff;
-        }
-
-        #congratulation-popup h2 {
-            color: #007bff;
-        }
-
-        #congratulation-popup p {
-            font-size: 1.2em;
+            margin-bottom: 8px;
             color: #333;
         }
 
-        /* Popup animation */
-        @keyframes popup-animation {
-            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
-            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        .gform input,
+        .gform textarea {
+            padding: 15px;
+            font-size: 1.1em;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .gform input:focus,
+        .gform textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+        }
+
+        .gform textarea:hover {
+            border-color: #00e7ff;
+            box-shadow: 0 0 20px #00e7ff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .gform button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .gform button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add some responsiveness */
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .ginput,
+            .gtextarea {
+                padding: 12px;
+                font-size: 1em;
+            }
+
+            .gform button {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
 <body>
-
     <nav>
         <!-- Logo on the left side -->
         <div>
@@ -170,87 +174,41 @@
             <li><a href="./contact.html">Contact</a></li>
         </ul>
     </nav>
-    
-    <h1>Al Hidaya Arts Fest 2k24 - Result</h1>
 
-    <div class="result-container">
-        <h2>Team Scores</h2>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Team Name</th>
-                    <th>Score</th>
-                    <th>Percentage of 27% Programs</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="highlight">
-                    <td>Beith Hanoon</td>
-                    <td>398</td> <!-- Placeholder Score -->
-                    <td><span id="hanoon-percentage"></span>%</td>
-                </tr>
-                <tr>
-                    <td>Beith Jala</td>
-                    <td>396</td> <!-- Placeholder Score -->
-                    <td><span id="jala-percentage"></span>%</td>
-                </tr>
-                <tr class="highlight">
-                    <td>Beith Sahur</td>
-                    <td>403</td> <!-- Placeholder Score -->
-                    <td><span id="sahur-percentage"></span>%</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="ranking">
-            <h2>Final Rankings</h2>
-            <ol>
-                <li>Beith Hanoon (398 Points)</li>
-                <li>Beith Jala (396 Points)</li>
-                <li>Beith Sahur (403 Points)</li>
-            </ol>
+        <div class="contact-info">
+            <p>If you have any questions about the Al Hidaya Arts Fest 2k24, feel free to reach out to us! Simply fill out the form below, and we'll get back to you as soon as possible.</p>
         </div>
 
-        <h2 class="winner">🏆 Now Winner: Beith Sahur 🏆</h2>
-    </div>
+        <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbxKG5evzPz-3xUk7EjJ15mjUja2xfghPKF-F9xR1sNy68C46ihJleq_6lE7AmylfoPM/exec" onsubmit="redirectToResults()">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
 
-    <!-- Congratulation Popup -->
-    <div id="congratulation-popup">
-        <h2>🎉 Congratulations Beith Sahur! 🎉</h2>
-        <p>Now the <b>champions</b> of Al Hidaya Arts Fest 2k24!</p>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
     <script>
-        // Scores of each team
-        const scores = {
-            hanoon: 398,
-            jala: 396,
-            sahur: 403
-        };
-
-        const totalPossibleScore = 200; // Maximum score any team can achieve
-
-        // Function to calculate percentage (12% of the total score)
-        function calculatePercentage(score) {
-            return ((score / totalPossibleScore) * 12).toFixed(2);
-        }
-
-        // Set percentages for each team
-        document.getElementById('hanoon-percentage').innerText = calculatePercentage(scores.hanoon);
-        document.getElementById('jala-percentage').innerText = calculatePercentage(scores.jala);
-        document.getElementById('sahur-percentage').innerText = calculatePercentage(scores.sahur);
-
-        // Display congratulation popup for the winner
-        window.onload = function() {
-            const popup = document.getElementById('congratulation-popup');
-            popup.style.display = 'block';
-
-            // Automatically hide popup after 5 seconds
+        // Function to redirect to result page after form submission
+        function redirectToResults() {
             setTimeout(() => {
-                popup.style.display = 'none';
-            }, 2000);
-        };
+                window.location.href = 'contact.html'; // Redirect to result.html after submission
+            }, 1000); // Delay of 1 second
+        }
     </script>
 </body>
 </html>
