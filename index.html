@@ -67,16 +67,16 @@
             background-color: #fcb040;
             height: 100vh;
             color: rgb(0, 0, 0);
-            padding-right: 60%;
         }
 
-        /* Left Section for the image and text */
+        /* Left Section for the image */
         .left-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             max-width: 400px;
+            margin-right: 50px; /* Add space between image and text */
         }
 
         /* Adjust the image size */
@@ -87,42 +87,22 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
+        /* Right Section for the text */
+        .right-section {
+            max-width: 600px; /* Adjust as needed */
+            text-align: left; /* Align text to the left */
+        }
+
         /* Text under the image */
-        .left-section h1 {
+        .right-section h1 {
             font-size: 2.5em;
             font-weight: bold;
             margin-top: 1em;
         }
 
-        .left-section p {
+        .right-section p {
             font-size: 1.2em;
             margin-top: 0.5em;
-        }
-
-        .liw {
-            padding-top: 15px;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-        .icons{
-            padding-left: 21%;
-        }
-
-        .icons a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .icons ion-icon {
-            color: #3f3f41;
-            font-size: 30px;
-            padding-left: 14px;
-            padding-top: 5px;
-            transition: 0.3s ease;
-        }
-
-        .icons ion-icon:hover {
-            color: #ff7200;
         }
 
         /* Footer Section */
@@ -132,7 +112,6 @@
             background-color: #3f3f41;
             color: white;
         }
-
     </style>
 </head>
 <body>
@@ -157,9 +136,13 @@
 
     <!-- Main Section with Image and Text -->
     <section class="main-section">
-        <!-- Left Section (Image and Text) -->
+        <!-- Left Section (Image) -->
         <div class="left-section">
             <img src="./las.jpg" alt="Event Image">
+        </div>
+
+        <!-- Right Section (Text) -->
+        <div class="right-section">
             <h1>LASTHABSHI</h1>
             <p>Arts Fest 2k24</p>
             <p>Al-Hidaya Islamic Academy Presents</p>
@@ -177,3 +160,4 @@
 
 </body>
 </html>
+
