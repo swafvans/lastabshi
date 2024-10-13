@@ -8,12 +8,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #fcb040;
             margin: 0;
             padding: 20px;
             color: #333;
-            background-color: #fcb040;
         }
+
         nav {
             background-color: #161515;
             padding: 1rem 0;
@@ -25,7 +25,6 @@
             padding: 1em 5%;
         }
 
-        /* Logo styling */
         .logo {
             width: 50px;
             height: auto;
@@ -51,33 +50,40 @@
             text-align: center;
             color: #041c35;
         }
+
         .result-container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: #fcb040;
+            background-color: #fff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(128, 128, 128, 0.5); /* Added extra shadow with gray glow */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(128, 128, 128, 0.5);
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 30px;
         }
+
         table, th, td {
             border: 1px solid #ddd;
         }
+
         th, td {
             padding: 15px;
             text-align: center;
         }
+
         th {
             background-color: #3f3f41;
             color: white;
         }
+
         .highlight {
             background-color: #f1f8ff;
         }
+
         .winner {
             background-color: #fcb040;
             color: #3f3f41;
@@ -85,17 +91,21 @@
             animation: congrats-animation 1.53s infinite alternate;
             border-radius: 10px;
         }
+
         .ranking {
             margin-top: 30px;
         }
+
         .ranking h2 {
             text-align: center;
             margin-bottom: 10px;
         }
+
         .ranking ol {
             list-style-type: decimal;
             padding-left: 40px;
         }
+
         .ranking ol li {
             font-size: 1.2em;
             margin-bottom: 10px;
@@ -107,7 +117,7 @@
             100% { transform: scale(1.1); background-color: #00ff22; }
         }
 
-        /* Styles for the popup animation */
+        /* Popup animation */
         #congratulation-popup {
             position: fixed;
             top: 50%;
@@ -121,9 +131,11 @@
             text-align: center;
             animation: popup-animation 0.5s ease-out;
         }
+
         #congratulation-popup h2 {
             color: #007bff;
         }
+
         #congratulation-popup p {
             font-size: 1.2em;
             color: #333;
@@ -166,7 +178,7 @@
                 <tr>
                     <th>Team Name</th>
                     <th>Score</th>
-                    <th>Percentage of 12% programs </th>
+                    <th>Percentage of 12% Programs</th>
                 </tr>
             </thead>
             <tbody>
@@ -237,171 +249,5 @@
             }, 5000);
         };
     </script>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Hidaya Arts Fest 2k24 - Result Page</title>
-    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            background-color: #fcb040; /* Retain the original background color */
-        }
-
-        nav {
-            background-color: #161515;
-            padding: 1rem 0;
-            color: #ddd;
-            border-bottom: 1px solid #252424;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1em 5%;
-        }
-
-        /* Logo styling */
-        .logo {
-            width: 50px;
-            height: auto;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style-type: none;
-        }
-
-        nav ul li {
-            margin-left: 2em;
-        }
-
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        h1 {
-            text-align: center;
-            color: #041c35;
-        }
-
-        .result-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white; /* Set background color to white */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(128, 128, 128, 0.5);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-            background-color: white; /* Set table background color to white */
-        }
-
-        table, th, td {
-            border: 1px solid #ddd; /* Keep the border lines */
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #3f3f41;
-            color: white;
-        }
-
-        .highlight {
-            background-color: #f1f8ff;
-        }
-
-        .winner {
-            background-color: #fcb040;
-            color: #3f3f41;
-            font-weight: bold;
-            animation: congrats-animation 1.53s infinite alternate;
-            border-radius: 10px;
-        }
-
-        .ranking {
-            margin-top: 30px;
-        }
-
-        .ranking h2 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .ranking ol {
-            list-style-type: decimal;
-            padding-left: 40px;
-        }
-
-        .ranking ol li {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        /* Congratulation animation styles */
-        @keyframes congrats-animation {
-            0% { transform: scale(1); background-color: #00ff22; }
-            100% { transform: scale(1.1); background-color: #00ff22; }
-        }
-
-        /* Styles for the popup animation */
-        #congratulation-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fcb040;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgb(73, 72, 72);
-            display: none;
-            text-align: center;
-            animation: popup-animation 0.5s ease-out;
-        }
-
-        #congratulation-popup h2 {
-            color: #007bff;
-        }
-
-        #congratulation-popup p {
-            font-size: 1.2em;
-            color: #333;
-        }
-
-        /* Popup animation */
-        @keyframes popup-animation {
-            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
-            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <!-- Logo on the left side -->
-        <div>
-            <a href="./index.html">
-                <img src="./logo.png" alt="Logo" class="logo">
-            </a>
-        </div>
-
-        <!-- Menu Items -->
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="result.html">Result</a></li
-
+</body>
+</html>
