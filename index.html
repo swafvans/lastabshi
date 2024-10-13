@@ -125,6 +125,106 @@
             background-color: #3f3f41;
             color: white;
         }
+
+         /* Phone screens (max-width: 600px) */
+         @media only screen and (max-width: 600px) {
+            /* The layout on phones: img under nav, text under img, footer last */
+            .main-section {
+                padding: 2%;
+            }
+
+            .left-section img {
+                width: 100%;
+            }
+
+            .right-section {
+                padding: 10%;
+                max-width: 100%;
+                border-radius: 10px;
+            }
+
+            .right-section h1 {
+                font-size: 1.8em;
+            }
+
+            .right-section p {
+                font-size: 1em;
+            }
+        }
+
+        /* Tablet screens (601px - 1024px) */
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            /* The layout on tablets: img under nav, text under img, footer last */
+            .main-section {
+                padding: 3% 5%;
+            }
+
+            .left-section img {
+                width: 100%;
+            }
+
+            .right-section {
+                padding: 5%;
+                max-width: 90%;
+                border-radius: 15px;
+            }
+
+            .right-section h1 {
+                font-size: 2.2em;
+            }
+
+            .right-section p {
+                font-size: 1.1em;
+            }
+        }
+
+        /* TV screens (1025px - 1920px) */
+        @media only screen and (min-width: 1025px) and (max-width: 1920px) {
+            nav ul li {
+                margin-left: 2.5em;
+            }
+
+            .main-section {
+                padding: 4% 8%;
+            }
+
+            .right-section {
+                max-width: 60%;
+                padding: 3% 4%;
+            }
+
+            .right-section h1 {
+                font-size: 3em;
+            }
+
+            .right-section p {
+                font-size: 1.4em;
+            }
+        }
+
+        /* Large TV and PC screens (above 1920px) */
+        @media only screen and (min-width: 1921px) {
+            nav ul li {
+                margin-left: 3em;
+            }
+
+            .main-section {
+                padding: 6% 10%;
+            }
+
+            .right-section {
+                max-width: 50%;
+                padding: 3% 5%;
+            }
+
+            .right-section h1 {
+                font-size: 3.5em;
+            }
+
+            .right-section p {
+                font-size: 1.6em;
+            }
+        }
     </style>
 </head>
 <body>
