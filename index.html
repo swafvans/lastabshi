@@ -99,65 +99,6 @@
             margin-top: 0.5em;
         }
 
-        /* Login Form */
-        .form {
-            position: absolute;
-            top: 50%;
-            right: 10%;
-            transform: translateY(-50%);
-            max-width: 350px;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 6px 8px 18px 0px;
-            border-radius: 10px;
-            margin-top: 4.5%;
-        }
-
-        .form h2 {
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #3f3f41;
-        }
-
-        .form input {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            font-size: 1.2em;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .form button {
-            display: inline-block;
-            width: 100%;
-            padding: 1em;
-            background-color: #3f3f41;
-            color: #fff;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .form button:hover {
-            background-color: #fcb040;
-        }
-
-        .form .link {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 17px;
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        .form .link a {
-            text-decoration: none;
-            color: #ff7200;
-        }
-
         .liw {
             padding-top: 15px;
             padding-bottom: 10px;
@@ -225,23 +166,6 @@
         </div>
     </section>
 
-    <!-- Login Form -->
-    <div class="form">
-        <h2>Login Here</h2>
-        <input type="email" id="email" placeholder=" Email ">
-        <input type="password" id="password" placeholder=" Password ">
-        <button class="btnn" onclick="login()">Login</button>
-
-        <p class="link">Don't have an account? <a href="./sign.html">Sign up here</a></p>
-        <p class="liw">Log in with</p>
-
-        <div class="icons">
-            <a href="https://www.google.com/local/place/fid/0x3b080dcb49713135:0xa51a24ea1e894326/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DY4kKTMsVI3sgp2axUf75Ew%26cb_client%3Dlu.gallery.gps%26w%3D160%26h%3D106%26yaw%3D347.63556%26pitch%3D0%26thumbfov%3D100&ik=CAISFlk0a0tUTXNWSTNzZ3AyYXhVZjc1RXc%3D"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="huda_ahia"><ion-icon name="logo-instagram"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         &copy; 2k24 Al-Hidaya Arts Fest
@@ -251,26 +175,5 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- JavaScript for form validation and login -->
-    <script>
-        function login() {
-            // Get the input values
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            // Basic validation
-            if (!email || !password) {
-                alert("Please enter both email and password.");
-                return;
-            }
-
-            // Sample authentication
-            if (email === "admin@example.com" && password === "password") {
-                window.location.href = "dashboard.html";
-            } else {
-                console.log("Invalid login attempt");
-            }
-        }
-    </script>
 </body>
 </html>
