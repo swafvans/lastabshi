@@ -26,14 +26,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1em 5%; /* Added padding for better spacing */
+            padding: 1em 5%;
             padding-top: 0;
             margin-top: 0;
         }
 
         /* Logo styling */
         .logo {
-            width: 50px; /* Adjust logo size */
+            width: 50px;
             height: auto;
         }
 
@@ -53,10 +53,9 @@
             font-weight: bold;
             transition: 0.6s ease;
         }
-        nav ul li a:hover{
-        color: #fcb040;
+        nav ul li a:hover {
+            color: #fcb040;
         }
-
 
         .contact-container {
             max-width: 900px;
@@ -84,20 +83,20 @@
             color: #555;
         }
 
-        .contact-form {
+        .gform {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        .contact-form label {
+        .gform label {
             font-size: 1.2em;
             margin-bottom: 8px;
             color: #333;
         }
 
-        .contact-form input,
-        .contact-form textarea {
+        .gform input,
+        .gform textarea {
             padding: 15px;
             font-size: 1.1em;
             border: 2px solid #ddd;
@@ -106,22 +105,21 @@
             transition: all 0.3s ease;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
+        .gform input:focus,
+        .gform textarea:focus {
             border-color: #007bff;
             outline: none;
             box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
         }
 
-        .contact-form textarea:hover {
-            border-color: #00e7ff; /* Glow border color when hovered */
-            box-shadow: 0 0 20px #00e7ff; /* Glow effect */
-            transition: all 0.3s ease; /* Smooth transition */
-            
+        .gform textarea:hover {
+            border-color: #00e7ff;
+            box-shadow: 0 0 20px #00e7ff;
+            transition: all 0.3s ease;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-        .contact-form button {
+        .gform button {
             padding: 15px 30px;
             background-color: #007bff;
             color: white;
@@ -132,7 +130,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .contact-form button:hover {
+        .gform button:hover {
             background-color: #0056b3;
         }
 
@@ -146,13 +144,13 @@
                 font-size: 2em;
             }
 
-            .contact-form input,
-            .contact-form textarea {
+            .ginput,
+            .gtextarea {
                 padding: 12px;
                 font-size: 1em;
             }
 
-            .contact-form button {
+            .gform button {
                 font-size: 1.1em;
             }
         }
@@ -184,7 +182,7 @@
             <p>If you have any questions about the Al Hidaya Arts Fest 2k24, feel free to reach out to us! Simply fill out the form below, and we'll get back to you as soon as possible.</p>
         </div>
 
-        <form class="contact-form" action="submit_contact_form.php" method="POST">
+        <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbxKG5evzPz-3xUk7EjJ15mjUja2xfghPKF-F9xR1sNy68C46ihJleq_6lE7AmylfoPM/exec" onsubmit="redirectToResults()">
             <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -204,5 +202,13 @@
         </form>
     </div>
 
+    <script>
+        // Function to redirect to result page after form submission
+        function redirectToResults() {
+            setTimeout(() => {
+                window.location.href = 'contact.html'; // Redirect to result.html after submission
+            }, 1000); // Delay of 1 second
+        }
+    </script>
 </body>
 </html>
