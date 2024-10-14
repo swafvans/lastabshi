@@ -16,7 +16,11 @@
         /* Body styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #fcb040;
+            background-image: url('./bg .jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the background covers the entire section */
+    background-repeat: no-repeat; /* Prevents repeating of the background image */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
         }
 
         /* Navigation bar */
@@ -65,11 +69,6 @@
     justify-content: center;
     flex-direction: column;
     padding: 5% 10%;
-    background-image: url('./bg .jpg'); /* Path to your background image */
-    background-size: cover; /* Ensures the background covers the entire section */
-    background-repeat: no-repeat; /* Prevents repeating of the background image */
-    background-position: center; /* Centers the background image */
-    background-attachment: fixed; /* Keeps the background fixed during scrolling */
     height: auto;
     color: rgb(0, 0, 0);
 }
