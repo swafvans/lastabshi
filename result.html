@@ -184,6 +184,33 @@
     .logo {
         width: 40px;
     }
+
+    @media only screen and (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto; /* Enables horizontal scrolling on small screens */
+        white-space: nowrap; /* Prevents line breaks in table cells */
+    }
+
+    th, td {
+        font-size: 0.8em; /* Adjust font size for better readability on mobile */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .result-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Adjust the title font size */
+    h1 {
+        font-size: 1.5em; /* Decrease title size for mobile */
+    }
+
+    /* Adjusting the winner title size */
+    .winner {
+        font-size: 1.2em; /* Decrease winner font size for mobile */
+    }
+    }
     </style>
 </head>
 <body>
