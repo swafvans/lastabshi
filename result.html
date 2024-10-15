@@ -219,23 +219,39 @@
                     <th>Uoola</th>
                     <th>Thanawiyyah</th>
                     <th>Aliya</th>
+                    <th>General</th>
                     <th>Score</th>
-                    <th>Percentage of 33% Programs</th>
+                    <th>Percentage of 55% Programs</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="highlight">
                     <td>Beith Hanoon</td>
-                    <td>515</td> <!-- Placeholder Score -->
+                    <td>146</td>
+                    <td>212</td>
+                    <td>165</td>
+                    <td>233</td>
+                    <td>6</td>
+                    <td>762</td> <!-- Placeholder Score -->
                     <td><span id="hanoon-percentage"></span>%</td>
                 </tr>
                 <tr>
                     <td>Beith Jala</td>
-                    <td>515</td> <!-- Placeholder Score -->
+                    <td>115</td>
+                    <td>212</td>
+                    <td>261</td>
+                    <td>214</td>
+                    <td>13</td>
+                    <td>814</td> <!-- Placeholder Score -->
                     <td><span id="jala-percentage"></span>%</td>
                 </tr>
                 <tr class="highlight">
                     <td>Beith Sahur</td>
+                    <td>146</td>
+                    <td>120</td>
+                    <td>210</td>
+                    <td>202</td>
+                    <td>10</td>
                     <td>474</td> <!-- Placeholder Score -->
                     <td><span id="sahur-percentage"></span>%</td>
                 </tr>
@@ -245,18 +261,18 @@
         <div class="ranking">
             <h2>Final Rankings</h2>
             <ol>
-                <li>Beith Hanoon (515 Points)</li>
-                <li>Beith Jala (515 Points)</li>
-                <li>Beith Sahur (474 Points)</li>
+                <li>Beith Hanoon (762 Points)</li>
+                <li>Beith Jala (814 Points)</li>
+                <li>Beith Sahur (688 Points)</li>
             </ol>
         </div>
 
-        <h2 class="winner">🏆 Now Winner: Beith Hanoon & Jala 🏆</h2>
+        <h2 class="winner">🏆 Now Winner: Beith Jala 🏆</h2>
     </div>
 
     <!-- Congratulation Popup -->
     <div id="congratulation-popup">
-        <h2>🎉 Congratulations Beith Hanoon & Jala! 🎉</h2>
+        <h2>🎉 Congratulations Beith Jala! 🎉</h2>
         <p>Now the <b>champions</b> of Al Hidaya Arts Fest 2k24!</p>
     </div>
     <footer>
@@ -265,14 +281,14 @@
     <script>
         // Scores of each team
         const scores = {
-            hanoon: 515,
-            jala: 515,
-            sahur: 474
+            hanoon: 762,
+            jala:   814,
+            sahur:  688
         };
 
         const totalPossibleScore = 200; // Maximum score any team can achieve
 
-        // Function to calculate percentage (12% of the total score)
+        // Function to calculate percentage (55% of the total score)
         function calculatePercentage(score) {
             return ((score / totalPossibleScore) * 12).toFixed(2);
         }
