@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('./bg .jpg'); /* Path to your background image */
+            background-image: url('./bg.jpg'); /* Corrected path to your background image */
             background-size: cover; /* Ensures the background covers the entire section */
             background-repeat: no-repeat; /* Prevents repeating of the background image */
             background-position: center; /* Centers the background image */
@@ -120,12 +120,12 @@
         }
 
         footer {
-       text-align: center;
-       padding: 2em 0;
-       background-color: #161515; /* Dark background to match the navigation bar */
-       color: white;
-       margin-top: 20px;
-       }
+            text-align: center;
+            padding: 2em 0;
+            background-color: #161515; /* Dark background to match the navigation bar */
+            color: white;
+            margin-top: 20px;
+        }
 
         /* Congratulation animation styles */
         @keyframes congrats-animation {
@@ -162,55 +162,55 @@
             0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
             100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
         }
+
         @media only screen and (max-width: 600px) {
-    /* Reordering the nav items like on desktop */
-    nav ul {
-        flex-direction: row;
-        padding: 0;
-        justify-content: flex-start;
-        align-items: center;
-    }
+            /* Reordering the nav items like on desktop */
+            nav ul {
+                flex-direction: row;
+                padding: 0;
+                justify-content: flex-start;
+                align-items: center;
+            }
 
-    nav ul li {
-        margin-left: 1em; /* Keep enough spacing between items */
-        margin-bottom: 0;
-    }
+            nav ul li {
+                margin-left: 1em; /* Keep enough spacing between items */
+                margin-bottom: 0;
+            }
 
-    nav ul li a {
-        font-size: 0.9em; /* Adjust font size for mobile */
-    }
+            nav ul li a {
+                font-size: 0.9em; /* Adjust font size for mobile */
+            }
 
-    /* Adjust logo size for mobile */
-    .logo {
-        width: 40px;
-    }
+            /* Adjust logo size for mobile */
+            .logo {
+                width: 40px;
+            }
 
-    @media only screen and (max-width: 600px) {
-    table {
-        display: block;
-        overflow-x: auto; /* Enables horizontal scrolling on small screens */
-        white-space: nowrap; /* Prevents line breaks in table cells */
-    }
+            table {
+                display: block;
+                overflow-x: auto; /* Enables horizontal scrolling on small screens */
+                white-space: nowrap; /* Prevents line breaks in table cells */
+            }
 
-    th, td {
-        font-size: 0.8em; /* Adjust font size for better readability on mobile */
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
+            th, td {
+                font-size: 0.8em; /* Adjust font size for better readability on mobile */
+                padding: 10px; /* Reduce padding for smaller screens */
+            }
 
-    .result-container {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
+            .result-container {
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
 
-    /* Adjust the title font size */
-    h1 {
-        font-size: 1.5em; /* Decrease title size for mobile */
-    }
+            /* Adjust the title font size */
+            h1 {
+                font-size: 1.5em; /* Decrease title size for mobile */
+            }
 
-    /* Adjusting the winner title size */
-    .winner {
-        font-size: 1.2em; /* Decrease winner font size for mobile */
-    }
-    }
+            /* Adjusting the winner title size */
+            .winner {
+                font-size: 1.2em; /* Decrease winner font size for mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -268,8 +268,10 @@
                 </tr>
             </tbody>
         </table>
+        
+        <h2>Final Team Scores</h2>
         <table>
-            <tbody>
+            <thead>
                 <tr>
                     <th>Team Name</th>
                     <th>Aliya</th>
@@ -288,72 +290,48 @@
                 </tr>
                 <tr>
                     <td>Beith Jala</td>
-                    <td>214</td>
-                    <td>13</td>
-                    <td>814</td> <!-- Placeholder Score -->
+                    <td>103</td>
+                    <td>5</td>
+                    <td>118</td>
                     <td><span id="jala-percentage"></span>%</td>
                 </tr>
                 <tr class="highlight">
                     <td>Beith Sahur</td>
-                    <td>202</td>
-                    <td>10</td>
-                    <td>474</td> <!-- Placeholder Score -->
+                    <td>122</td>
+                    <td>3</td>
+                    <td>120</td>
                     <td><span id="sahur-percentage"></span>%</td>
                 </tr>
             </tbody>
         </table>
-        <table>
 
         <div class="ranking">
-            <h2>Final Rankings</h2>
+            <h2>Overall Ranking</h2>
             <ol>
-                <li>Beith Hanoon (762 Points)</li>
-                <li>Beith Jala (814 Points)</li>
-                <li>Beith Sahur (688 Points)</li>
+                <li>Beith Hanoon</li>
+                <li>Beith Sahur</li>
+                <li>Beith Jala</li>
             </ol>
         </div>
-
-        <h2 class="winner">🏆 Now Winner: Beith Jala 🏆</h2>
     </div>
 
-    <!-- Congratulation Popup -->
-    <div id="congratulation-popup">
-        <h2>🎉 Congratulations Beith Jala! 🎉</h2>
-        <p>Now the <b>champions</b> of Al Hidaya Arts Fest 2k24!</p>
-    </div>
     <footer>
-        &copy; 2k24 Al-Hidaya Arts Fest
+        <p>&copy; 2024 Al Hidaya Arts Fest. All rights reserved.</p>
     </footer>
+
     <script>
-        // Scores of each team
-        const scores = {
-            hanoon: 762,
-            jala:   814,
-            sahur:  688
-        };
-
-        const totalPossibleScore = 200; // Maximum score any team can achieve
-
-        // Function to calculate percentage (55% of the total score)
-        function calculatePercentage(score) {
-            return ((score / totalPossibleScore) * 12).toFixed(2);
+        // Function to calculate and display percentage scores
+        function calculatePercentage(total, max) {
+            return ((total / max) * 100).toFixed(2);
         }
 
-        // Set percentages for each team
-        document.getElementById('hanoon-percentage').innerText = calculatePercentage(scores.hanoon);
-        document.getElementById('jala-percentage').innerText = calculatePercentage(scores.jala);
-        document.getElementById('sahur-percentage').innerText = calculatePercentage(scores.sahur);
+        // Assuming the total possible score for the general category is 10
+        const maxGeneralScore = 10;
 
-        // Display congratulation popup for the winner
-        window.onload = function() {
-            const popup = document.getElementById('congratulation-popup');
-            popup.style.display = 'block';
-
-            // Automatically hide popup after 5 seconds
-            setTimeout(() => {
-                popup.style.display = 'none';
-            }, 3000);
-        };
+        // Update the percentages for each team
+        document.getElementById('hanoon-percentage').innerText = calculatePercentage(6, maxGeneralScore);
+        document.getElementById('jala-percentage').innerText = calculatePercentage(5, maxGeneralScore);
+        document.getElementById('sahur-percentage').innerText = calculatePercentage(3, maxGeneralScore);
     </script>
 </body>
 </html>
